@@ -44,7 +44,8 @@
        - {key: "immutable.user.MONGO", value: "true"}
        - {key: "immutable.user.REDIS_HOST", value: "redis-ENV.roboshop.internal"}
        - {key: "immutable.user.MONGO_URL", value: "mongodb://mongodb-ENV.roboshop.internal:27017/users"}
-       - {key: "immutable.docdb.catalogue.MONGO_URL", value: "mongodb://:RoboShop123@prod-docdb.cluster-cbvsbeoyxek4.us-east-1.docdb.amazonaws.com:27017/catalogue?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false"}
+       - {key: "immutable.docdb.catalogue.MONGO_URL", value: "mongodb://DOCDB_USER:DOCDB_PASS@DOCDB_ENDPOINT:27017/catalogue?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false"}
+       - {key: "immutable.docdb.user.MONGO_URL", value: "mongodb://DOCDB_USER:DOCDB_PASS@DOCDB_ENDPOINT:27017/users?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false"}
 
 
 # {{ lookup('aws_ssm', 'mutable.catalogue.dev.MONGO_URL', region='us-east-1' ) }}
